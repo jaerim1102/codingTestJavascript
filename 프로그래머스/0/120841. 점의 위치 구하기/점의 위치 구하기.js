@@ -1,11 +1,8 @@
 function solution(dot) {
-    if (Math.sign(dot[0]) === 1 && Math.sign(dot[1]) === 1){
-        return 1;
-    } else if (Math.sign(dot[0]) === -1 && Math.sign(dot[1]) === 1){
-        return 2;
-    } else if (Math.sign(dot[0]) === -1 && Math.sign(dot[1]) === -1){
-        return 3;
-    } else if (Math.sign(dot[0]) === 1 && Math.sign(dot[1]) === -1){
-        return 4;
-    }
+  const [x, y] = dot;
+
+  if (x > 0 && y > 0) return 1; // 1사분면
+  if (x < 0 && y > 0) return 2; // 2사분면
+  if (x < 0 && y < 0) return 3; // 3사분면
+  if (x > 0 && y < 0) return 4; // 4사분면
 }
